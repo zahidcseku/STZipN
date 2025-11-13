@@ -1,0 +1,57 @@
+{
+    "name": "Basic Model",
+    "n_gpu": 1,
+    "common_params": {
+        "fdim": 2,
+        "poissonmodel": true,
+        "model_name": "GCN"
+    },
+    "data_loader": {
+        "type": "GBRDataset",
+        "args": {
+            "fileloc": "../data/rawdata/gbr_cots_culldata.xlsx"
+        }
+    },
+    "arch": {
+        "type": "GBRModel",
+        "args": {
+            "hidden_dims": [
+                32,
+                32
+            ],
+            "site_fdim": 2,
+            "threshold": 1e-05,
+            "kernelwidth": 1118
+        }
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args": {
+            "lr": 0.001,
+            "weight_decay": 0,
+            "amsgrad": true
+        }
+    },
+    "metrics": [
+        "absolute_error"
+    ],
+    "lr_scheduler": {
+        "type": "MultiStepLR",
+        "args": {
+            "gamma": 0.2
+        }
+    },
+    "trainer": {
+        "save_dir": "saved_runs/",
+        "save_period": 10,
+        "verbosity": 2,
+        "monitor": "min val_loss",
+        "early_stop": 40,
+        "tensorboard": true,
+        "epochs": 50,
+        "batchsize": 60,
+        "validation": false
+    },
+    "testratio": 0.25,
+    "valratio": 0.2
+}
