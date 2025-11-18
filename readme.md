@@ -4,7 +4,28 @@
 
 This repository contains the code and annonymized dataset for the article titled “Leveraging Sparse Observations to Predict Species Abundance Across Space and Time.” The project leverages state-of-the-art deep learning techniques to accurately estimate the abundance of COTS from spatiotemporal observations. By utilizing graph convolutional neural networks (GCNs) and recurrent neural netwroks (RNN), our approach aims to provide a robust and efficient method for monitoring COTS populations, which is crucial for coral reef conservation efforts.
 
-## How to run:
+## Abstract
+Biodiversity is declining globally at an unprecedented rate. Managers urgently need to allocate limited resources to control pest species where interventions have the highest ecological impact. However, many species are hard to detect, and data collection is often expensive, irregular, and incomplete, thus posing significant challenges for machine learning models that traditionally require large and regular datasets. 
+We present a novel deep learning architecture that estimates the spatiotemporal abundance of hard-to-detect species from sparse, zero-inflated, and irregular data. 
+Our method combines Graph Convolutional Networks (GCNs) to model spatial dependencies across monitoring sites with Recurrent Neural Networks (RNNs) to capture long-range temporal dynamics explicitly addresses the challenges of data sparsity, heterogeneity, and irregular sampling. 
+We apply our model to the Crown-of-Thorns Starfish (COTS) on Australia's Great Barrier Reef, a species with devastating impact on coral reefs and a major target of pest control programs. Our method significantly outperforms baseline approaches and the current resource-intensive approach, manta-tow surveillance, in both accuracy and detectability. Simulations indicate a 20\% increase in starfish removal efficiency over a year, enabling more effective coral protection.
+This work demonstrates how tailored deep learning methods can overcome ecological data limitations and substantially improve conservation outcomes. 
+
+## Citation
+```bibtex
+@article{zahid2026stzipn,
+  title={Leveraging Sparse Observations to Predict Species Abundance Across Space and Time},
+  author={Md Zahidul Islam and Cameron S. Fletcher and Ke Sun and Amir Dezfouli and Iadine Chades,
+  year={2026},
+  number={TBD},
+  journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2026}, 
+  month={TBD}, 
+  pages={TBD}
+}
+```
+
+## How to run
 Please follow the notebook `driver.ipynb` to run the steps in the code base.
 
 ## Main scripts
